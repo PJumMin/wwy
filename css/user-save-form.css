@@ -9,22 +9,25 @@ body {
 }
 
 body {
+    font-family: 'Noto Sans KR', sans-serif;
     /* display: flex; */
     justify-content: center;
     align-items: center;
+
 }
 
 .form-box {
-    width: 400px;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0 auto;
+    max-width: 40%;
+    width: 100%;
 }
 
 .save {
-    font-size: 28px;
+    font-size: 32px;
     text-align: center;
 }
 

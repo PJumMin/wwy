@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-    <title>Blog</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크랩</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="/css/scrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
 </head>
 
 <body class="bg-light" style="padding-top: 56px">
+
+    <!-- nav -->
     <nav class="navbar navbar-expand bg-white border-bottom fixed-top">
         <div class="container d-flex justify-content-between align-items-center" style="max-width: 50%">
             <!-- Left: 로고 + 메뉴 -->
@@ -44,6 +52,7 @@
         </div>
     </nav>
 
+    <!-- main -->
     <div class="container mt-4 mb-5" style="max-width: 60%">
         <div class="d-flex gap-4 align-items-top justify-content-between">
             <!-- 왼쪽 박스 -->
@@ -59,10 +68,10 @@
                     <h5 class="ms-3 fw-bold mt-4">채용</h5>
                     <ul class="navbar-nav flex-column gap-2 mb-5 ps-3">
                         <li class="nav-item">
-                            <a class="nav-link text-dark fw-semibold ps-4" href="#">이력서</a>
+                            <a class="nav-link text-dark fw-semibold ps-4" href="#">스크랩</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark fw-semibold ps-4" href="#">스크랩</a>
+                            <a class="nav-link text-dark fw-semibold ps-4" href="#">채용공고 관리</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark fw-semibold ps-4" href="#">지원</a>
@@ -77,45 +86,48 @@
             <!-- 오른쪽 박스 -->
             <div class="flex-fill" style="max-width: 75%">
                 <div class="bg-white border rounded p-4">
-                    <div class="d-flex justify-content-between">
-                        <h4 class="fw-bold">지원 현황</h4>
+                    <h5 class="mb-4 fw-bold">스크랩</h5>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <!-- 카드 1 -->
+                        <div class="col">
+                            <div class="card h-100 shadow-sm position-relative img-box">
+                                <img src="/img/Screenshot_15.png" class="card-img-top" alt="Charted">
+                                <div class="card-body icon-box">
+                                    <h6 class="card-title fw-semibold">채용공고 이름</h6>
+                                    <p class="card-text text-muted mb-1">기업명</p>
+                                    <p class="card-text text-muted mb-2">지역</p>
+                                    <span class="badge-custom"><i class="fas fa-coins me-1"></i>기술 스택</span>
+                                    <i id="favoriteIcon" class="fa fa-star icon"
+                                        style="font-size: 24px; color: yellow;text-shadow: 0 0 1px #000, 0 0 1px #000;"
+                                        onclick=""></i>
+                                    <span class="ms-1"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 카드 2 -->
+                        <div class="col">
+                            <div class="card h-100 shadow-sm position-relative">
+                                <img src="/img/Screenshot_14.png" class="card-img-top" alt="Charted">
+                                <div class="card-body icon-box">
+                                    <h6 class="card-title fw-semibold">채용공고 이름</h6>
+                                    <p class="card-text text-muted mb-1">기업명</p>
+                                    <p class="card-text text-muted mb-2">지역</p>
+                                    <span class="badge-custom"><i class="fas fa-coins me-1"></i>기술 스택</span>
+                                    <i id="favoriteIcon" class="fa fa-star icon"
+                                        style="font-size: 24px; color: yellow;text-shadow: 0 0 1px #000, 0 0 1px #000;"
+                                        onclick=""></i>
+                                    <span class="ms-1"></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <br />
-                    <!-- 지원 이력서 리스트 -->
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>지원회사</th>
-                                <th>지원포지션</th>
-                                <th>작성시간</th>
-                                <th>진행상태</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>네이버</td>
-                                <td>프론트엔드 개발자</td>
-                                <td>2025. 03. 11</td>
-                                <td>대기</td>
-                            </tr>
-                            <tr>
-                                <td>카카오</td>
-                                <td>웹 풀스택 개발자</td>
-                                <td>2025. 04. 01</td>
-                                <td>대기</td>
-                            </tr>
-                            <tr>
-                                <td>구글</td>
-                                <td>Backend Developer</td>
-                                <td>2025. 04. 11</td>
-                                <td>반려</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- footer -->
     <footer class="bg-white py-5 border-top">
         <div class="container text-center" style="max-width: 60%">
             <h4>Copyright 2025. WWY All rights reserved.</h4>
