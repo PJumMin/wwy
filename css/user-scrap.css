@@ -48,3 +48,12 @@ a {
   width: 100%;
   padding: 56px 0;
 }
+
+.recommend-card-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+.btn-detail:hover {
+  background-color: #333;
+}
